@@ -35,15 +35,14 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
 - probabilmente prima di inziare il programma per renderlo un minimo interattivo chiederei all'utente quando iniziare il gioco, magari con una piccola stringa che dice: "digita 1 se vuoi inizare il gioco"
 
-per prendere i numeri random uso la funzione math() tramite una variabile che chiamerò "random"
+per prendere i numeri random uso la funzione math() sulle variabili dei 2 players
 
 creiamo una variabile che ci servirà per inizare o meno il gioco ed altre 2 variabili per i giocatori
 
 ## variabili
 start = 0;
-random = math()
-userPlayer = 0
-pcPlayer = 0;
+userPlayer = math()
+pcPlayer = math()
 
 
 
@@ -55,11 +54,9 @@ pcPlayer = 0;
 
 2. creo una condizione if per chiedere all'utente se vuole o meno giocare
 
-3. dopo assegno la variabile "random" al il giocatore 1 che rappresenta l'utente e al giocatore 2 che rappresenta il computer nel primo caso assegno la variabile userPlayer = random
+3. successivamente inserisco le variabili nella condizione e le stampero in console
 
-e nel secondo caso pcPlayer = random
-4.  per assegnare ad entrambe i numeri casuali,
-successivamente creo una condizione if per la quale metto a confronto i numeri usciti e in base a chi ha vinto uscira un determinato testo
+4. successivamente creo una condizione if per la quale metto a confronto i numeri usciti e in base a chi ha vinto uscira un determinato testo
 
 
 prompt
@@ -68,14 +65,16 @@ SE start === 1
     ALLORA il gioco parte 
 
     userPlayer = random
+    console.log
     pcPlayer = random
-
-    stampa numeri dei giocatori
+    console.log
 
         SE  userPlayer > pcPlayer
             ALLORA  stamperemo "l'utente ha vinto il computer è stato sconfitto
-        ALTRIMENTI 
+        ALTRIMENTI SE userPlayer < pcPlayer
             ALLORA stamperemo "il computer compuer ha vinto l'utente è stato sconfitto "
+        ALTRIMENTI SE userPlayer === pcPlayer
+            ALLORA stamperemo "il risultato è pari"
 
 ALTRIMENTI
     il gioco non può iniziare e scriviamo "fine del gioco"
