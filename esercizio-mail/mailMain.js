@@ -3,16 +3,22 @@ const mailUtente = prompt('scrivi la tua mail:');
 
 const mailListArray = ["davideciammetti@gmail.com", "giacomopoli@outlook.it", "ariannaresto@yahoo.it"];
 
-for(let i = 0; i <= mailListArray.length; i++){
+
+// verifica
+let mailFound = false; 
+for(let i = 0; i < mailListArray.length; i++){
     
         if(mailListArray[i] === mailUtente){
-            console.log('la mail inserita è valida');
+            
+            mailFound = true;
             break;
-
-        }else if(mailListArray[i] !== mailUtente){
-            console.log('la mail inserita è sbagliata');
-
         }
     
 }
 
+// Decisione
+if(mailFound === true) {
+    console.log('mail confermata');
+} else {
+    console.log('mail errata');
+}
